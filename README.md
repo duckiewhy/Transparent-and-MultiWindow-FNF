@@ -132,7 +132,7 @@ function popupWindow(customWidth:Int, customHeight:Int, ?customX:Int, ?customNam
         dadWin.graphics.endFill();
         dadScrollWin.scrollRect = new Rectangle();
 	    	windowDad.stage.addChild(spr);
-		    windowDad.stage.addChild(fatalErrorScroll);
+		    windowDad.stage.addChild(dadScrollWin);
         dadScrollWin.addChild(dadWin);
         dadScrollWin.scaleX = 0.7;
         dadScrollWin.scaleY = 0.7;
