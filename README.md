@@ -24,7 +24,9 @@ if (defaultCamZoom < 1)
 bg.scrollFactor.set();
 add(bg);
 ```
-Then, afterwards, put the line FlxTransWindow.getWindowTransparent(); directly below it.
+Then, afterwards, put the line 
+```FlxTransWindow.getWindowTransparent();```
+directly below it.
 This will make the sprite of bg, and everything below it, transparent!
 You can add sprites above it to hide it, and toggle the visibility to reveal the transparent window.
 
