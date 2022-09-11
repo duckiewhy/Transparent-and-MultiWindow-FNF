@@ -115,14 +115,14 @@ function popupWindow(customWidth:Int, customHeight:Int, ?customX:Int, ?customNam
         // Application.current.window.x = Std.int(display.width / 2) - 640;
         // Application.current.window.y = Std.int(display.height / 2);
 
-        var bg = Paths.image(PUT YOUR IMAGE HERE!!!!).bitmap;
-        var spr = new Sprite();
+        // var bg = Paths.image(PUT YOUR IMAGE HERE!!!!).bitmap;
+        // var spr = new Sprite();
 
         var m = new Matrix();
 
-        spr.graphics.beginBitmapFill(bg, m);
-        spr.graphics.drawRect(0, 0, bg.width, bg.height);
-        spr.graphics.endFill();
+        // spr.graphics.beginBitmapFill(bg, m);
+        // spr.graphics.drawRect(0, 0, bg.width, bg.height);
+        // spr.graphics.endFill();
         FlxG.mouse.useSystemCursor = true;
 
         //Application.current.window.resize(640, 480);
@@ -133,8 +133,8 @@ function popupWindow(customWidth:Int, customHeight:Int, ?customX:Int, ?customNam
         dadWin.graphics.drawRect(0, 0, dad.pixels.width, dad.pixels.height);
         dadWin.graphics.endFill();
         dadScrollWin.scrollRect = new Rectangle();
-	    	windowDad.stage.addChild(spr);
-		    windowDad.stage.addChild(dadScrollWin);
+	// windowDad.stage.addChild(spr);
+        windowDad.stage.addChild(dadScrollWin);
         dadScrollWin.addChild(dadWin);
         dadScrollWin.scaleX = 0.7;
         dadScrollWin.scaleY = 0.7;
