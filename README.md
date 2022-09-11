@@ -4,10 +4,18 @@ Yeah! This is the code for transparent windows and mutliple linked windows for F
 
 THIS ISN'T IN LUA!! ITS HARDCODED (in psych engine) !!!!!!!!!!!!!
 
+## Credits:
+* [DuskieWhy] (https://twitter.com/DuskieWhy)
+* [TaeYai] (https://twitter.com/TaeYai)
+* [BreezyMelee] (https://twitter.com/BreezyMelee)
+* [YoshiCrafter] (https://twitter.com/YoshiCrafter29) - Additional help
+* [KadeDev] (https://twitter.com/kade0912) - Transparent window .hx file code
+
 # Transparent windows 
 First off, import the FlxTransWindow.hx from this repository.
 Next, you are going to want to make a bg sprite like this:
 
+```
 var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.fromRGB(1, 1, 1));
 if (defaultCamZoom < 1)
 {
@@ -15,9 +23,9 @@ if (defaultCamZoom < 1)
 }
 bg.scrollFactor.set();
 add(bg);
-
+```
 Then, afterwards, put the line FlxTransWindow.getWindowTransparent(); directly below it.
-This will make the sprite of `bg`, and everything below it, transparent!
+This will make the sprite of bg, and everything below it, transparent!
 You can add sprites above it to hide it, and toggle the visibility to reveal the transparent window.
 
 ### WARNING: ANY PIXELS WITH AN ALPHA BELOW ONE WILL HAVE BLACK BELOW IT, LIKE IMAGE 1
@@ -33,7 +41,9 @@ Like image 2!
 # Multi-Window
 We are going to make this window just create the dad. The rest, you're on your own!
 
-First, in `PlayState.hx`, you are going to want to import all of this:
+First, in PlayState.hx, you are going to want to import all of this:
+
+```
 import lime.app.Application;
 import lime.graphics.RenderContext;
 import lime.ui.MouseButton;
@@ -44,16 +54,19 @@ import openfl.geom.Matrix;
 import openfl.geom.Rectangle;
 import openfl.display.Sprite;
 import openfl.utils.Assets;
+```
 
 Define these variables:
+
+```
 var windowDad:Window;
- var dadWin = new Sprite();
- var dadScrollWin = new Sprite();
+var dadWin = new Sprite();
+var dadScrollWin = new Sprite();
+```
 
+Now, scroll down to the `update()` function, and add this below the `callOnLuas('onUpdatePost', [elapsed]);` line:
 
-Now, scroll down to the update() function, and add this below the callOnLuas('onUpdatePost', [elapsed]); line:
-
-
+```
         @:privateAccess
         var dadFrame = dad._frame;
         
@@ -64,12 +77,13 @@ Now, scroll down to the update() function, and add this below the callOnLuas('on
         dadScrollWin.scrollRect = rect;
         dadScrollWin.x = (((dadFrame.offset.x) - (dad.offset.x / 2)) * dadScrollWin.scaleX);
         dadScrollWin.y = (((dadFrame.offset.y) - (dad.offset.y / 2)) * dadScrollWin.scaleY);        
-
+```
 
 This sets up the frames for the animations that the dadOpponent plays, so when the window pops up, it plays the correct animations!
 
 Now finally, the function!
 
+```
 function popupWindow(customWidth:Int, customHeight:Int, ?customX:Int, ?customName:String) {
         var display = Application.current.window.display.currentMode;
         // PlayState.defaultCamZoom = 0.5;
@@ -127,5 +141,12 @@ function popupWindow(customWidth:Int, customHeight:Int, ?customX:Int, ?customNam
         Application.current.window.focus();
 	    	FlxG.autoPause = false;
     }
+```
     
-  Use the function
+Use the function, and define the width and height via Int, title, and X! You can also add your own variable to define the y, but for now I made it default to just half of the main window's height.
+Like this:
+
+`popupWindow(1280, 720, 'Testing Testing', 500);`
+
+I believe that should be it! 
+Thanks for using this awesome code by awesome people :]
