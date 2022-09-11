@@ -150,3 +150,4 @@ Like this:
 
 I believe that should be it! 
 Thanks for using this awesome code by awesome people :]
+JUST PLEASE CREDIT US!!! PLEASE!!!!! ok ok ily <3
