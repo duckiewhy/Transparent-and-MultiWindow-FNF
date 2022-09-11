@@ -8,13 +8,13 @@ So, first off, Transparent windows!
 
 So, first off you are going to want to make a bg sprite like this:
 
-`var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.fromRGB(1, 1, 1));
+```var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.fromRGB(1, 1, 1));
 if (defaultCamZoom < 1)
 {
   bg.scale.scale(1 / defaultCamZoom);
 }
 bg.scrollFactor.set();
-add(bg);`
+add(bg);```
 
 Then, afterwards, put the line `FlxTransWindow.getWindowTransparent();` directly below it.
 This will make the sprite of `bg`, and everything below it, transparent!
