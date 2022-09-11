@@ -17,7 +17,7 @@ bg.scrollFactor.set();
 add(bg);
 
 Then, afterwards, put the line FlxTransWindow.getWindowTransparent(); directly below it.
-This will make the sprite of `bg`, and everything below it, transparent!
+This will make the sprite of bg, and everything below it, transparent!
 You can add sprites above it to hide it, and toggle the visibility to reveal the transparent window.
 
 ### WARNING: ANY PIXELS WITH AN ALPHA BELOW ONE WILL HAVE BLACK BELOW IT, LIKE IMAGE 1
@@ -33,7 +33,7 @@ Like image 2!
 # Multi-Window
 We are going to make this window just create the dad. The rest, you're on your own!
 
-First, in `PlayState.hx`, you are going to want to import all of this:
+First, in PlayState.hx, you are going to want to import all of this:
 import lime.app.Application;
 import lime.graphics.RenderContext;
 import lime.ui.MouseButton;
