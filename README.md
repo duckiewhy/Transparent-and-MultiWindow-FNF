@@ -5,18 +5,18 @@ Yeah! This is the code for transparent windows and mutliple linked windows for F
 THIS ISN'T IN LUA!! ITS HARDCODED (in psych engine) !!!!!!!!!!!!!
 
 # Transparent windows 
-First off, import the `FlxTransWindow.hx` from this repository.
+First off, import the FlxTransWindow.hx from this repository.
 Next, you are going to want to make a bg sprite like this:
 
-``var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.fromRGB(1, 1, 1));
+var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.fromRGB(1, 1, 1));
 if (defaultCamZoom < 1)
 {
   bg.scale.scale(1 / defaultCamZoom);
 }
 bg.scrollFactor.set();
-add(bg);``
+add(bg);
 
-Then, afterwards, put the line `FlxTransWindow.getWindowTransparent();` directly below it.
+Then, afterwards, put the line FlxTransWindow.getWindowTransparent(); directly below it.
 This will make the sprite of `bg`, and everything below it, transparent!
 You can add sprites above it to hide it, and toggle the visibility to reveal the transparent window.
 
@@ -34,7 +34,7 @@ Like image 2!
 We are going to make this window just create the dad. The rest, you're on your own!
 
 First, in `PlayState.hx`, you are going to want to import all of this:
-``import lime.app.Application;
+import lime.app.Application;
 import lime.graphics.RenderContext;
 import lime.ui.MouseButton;
 import lime.ui.KeyCode;
@@ -43,7 +43,7 @@ import lime.ui.Window;
 import openfl.geom.Matrix;
 import openfl.geom.Rectangle;
 import openfl.display.Sprite;
-import openfl.utils.Assets;``
+import openfl.utils.Assets;
 
 Define these variables:
 var windowDad:Window;
@@ -51,7 +51,7 @@ var windowDad:Window;
  var dadScrollWin = new Sprite();
 
 
-Now, scroll down to the `update()` function, and add this below the `callOnLuas('onUpdatePost', [elapsed]);` line:
+Now, scroll down to the update() function, and add this below the callOnLuas('onUpdatePost', [elapsed]); line:
 
 
         @:privateAccess
