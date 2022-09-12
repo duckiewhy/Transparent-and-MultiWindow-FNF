@@ -150,6 +150,15 @@ Like this:
 
 `popupWindow(1280, 720, 'Testing Testing', 500);`
 
+If you'd like to get rid of the window, you can do that by simply adding this code:
+
+```
+if (windowDad != null)
+{
+   windowDad.close();
+}
+```
+
 I believe that should be it! 
 Thanks for using this awesome code by awesome people :]
 JUST PLEASE CREDIT US!!! PLEASE!!!!! ok ok ily <3
