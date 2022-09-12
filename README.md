@@ -150,7 +150,7 @@ Like this:
 
 `popupWindow(1280, 720, 'Testing Testing', 500);`
 
-If you'd like to get rid of the window, you can do that but simply adding this code:
+If you'd like to get rid of the window, you can do that by simply adding this code:
 
 ```
 if (windowDad != null)
