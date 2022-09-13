@@ -86,7 +86,7 @@ This sets up the frames for the animations that the dadOpponent plays, so when t
 Now finally, the function!
 
 ```
-function popupWindow(customWidth:Int, customHeight:Int, ?customX:Int, ?customY, ?customName:String) {
+function popupWindow(customWidth:Int, customHeight:Int, ?customX:Int, ?customY:Int, ?customName:String) {
         var display = Application.current.window.display.currentMode;
         // PlayState.defaultCamZoom = 0.5;
 
