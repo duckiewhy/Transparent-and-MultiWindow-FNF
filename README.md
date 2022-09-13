@@ -86,7 +86,7 @@ This sets up the frames for the animations that the dadOpponent plays, so when t
 Now finally, the function!
 
 ```
-function popupWindow(customWidth:Int, customHeight:Int, ?customX:Int, ?customName:String) {
+function popupWindow(customWidth:Int, customHeight:Int, ?customX:Int, ?customY, ?customName:String) {
         var display = Application.current.window.display.currentMode;
         // PlayState.defaultCamZoom = 0.5;
 
@@ -106,7 +106,10 @@ function popupWindow(customWidth:Int, customHeight:Int, ?customX:Int, ?customNam
 			customX = -10;
 		}
         windowDad.x = customX;
-	    	windowDad.y = Std.int(display.height / 2);
+	    windowDad.y = customY;
+        if(customY == null) {
+            windowDad.y = Std.int(display.height / 2);
+        }
         windowDad.stage.color = 0xFF010101;
         @:privateAccess
         windowDad.stage.addEventListener("keyDown", FlxG.keys.onKeyDown);
