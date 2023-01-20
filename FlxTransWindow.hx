@@ -1,6 +1,9 @@
 package;
-
-@:cppFileCode('#include <windows.h>\n#include <dwmapi.h>\n\n#pragma comment(lib, "Dwmapi")')
+#if windows 
+@:cppFileCode('#include <windows.h>\n#include <dwmapi.h>\n\n#pragma comment(lib, "libdwmapi.a")') 
+#elseif mac 
+@:cppFileCode('#include <dwmapi.h>\n\n#pragma comment(lib, "Dwmapi")')  
+#end 	
 class FlxTransWindow
 {
 	@:functionCode('
