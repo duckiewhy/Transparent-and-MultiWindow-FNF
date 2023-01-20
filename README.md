@@ -11,6 +11,11 @@ THIS ISN'T IN LUA!! ITS HARDCODED (in psych engine) !!!!!!!!!!!!!
 * [YoshiCrafter] (https://twitter.com/YoshiCrafter29) - Additional help
 * [KadeDev] (https://twitter.com/kade0912) - Transparent window .hx file code
 
+#dependencies for macos 
+1. install brew https://brew.sh
+2. brew install mingw-w64 
+3. your done
+
 # Transparent windows 
 First off, import the FlxTransWindow.hx from this repository.
 Next, you are going to want to make a bg sprite like this:
